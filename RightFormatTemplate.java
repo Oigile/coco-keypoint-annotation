@@ -76,9 +76,9 @@ public class RightFormatTemplate {
 		
 		JSONArray categories = new JSONArray();
 		JSONObject category = new JSONObject();
-		category.put("id", 0); 
-		category.put("name", "say my name"); 
-		category.put("supercategory", "superduper");
+		category.put("id", 1); 
+		category.put("name", "person"); 
+		category.put("supercategory", "person");
 
 		//keypoints
 		JSONArray keyarr2 = new JSONArray();
@@ -194,15 +194,9 @@ public class RightFormatTemplate {
 		full.put("licenses", licenses);
 		full.put("categories", categories);
 
-		//-------------------------------3B:SPECIFIC PART OF THE KEYPOINT JSON FILE---------------------------------
-
-
-		//--------------------------------------------3C:WRITE THE JSON FILE-----------------------------------------
-
 		//write the created json stuff into a file called data.json
 		try(FileWriter file1 = new FileWriter("data.json")){
 			file1.write(full.toString());
-
 			file1.flush();
 		}
 		catch(IOException e){
